@@ -10,29 +10,17 @@ export class TodoService {
     
     constructor(
         @InjectRepository(Todo)
-        private readonly TodoRepository: Repository<Todo>
-
-    ){}
-    getHello(): string {
-        return "heloo"
-        throw new Error('Method not implemented.');
-      }
+        private readonly TodoRepository: Repository<Todo>){}
 
 
 
-    findAll(){
-        return this.TodoRepository.find();
-    }
-    create(todo: Todo){
-        this.TodoRepository.save(todo);
+    getHello(): string {return "heloo" }
 
-    }
-    update(todo:Todo){
-        this.TodoRepository.update(todo.id,todo)
-    }
+    findAll(){ return this.TodoRepository.find();}
 
+    create(todo: Todo){this.TodoRepository.save(todo);}
+
+    update(todo:Todo){this.TodoRepository.update(todo.id,todo)}
     
-    delete(id: any) {
-        this.TodoRepository.delete(id)
-      }
+    delete(id: any) {this.TodoRepository.delete(id)}
 }

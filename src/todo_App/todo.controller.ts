@@ -2,15 +2,17 @@
 /* eslint-disable prettier/prettier */
 import {Body, Controller, Delete, Get, Param, Post, Put, Res} from '@nestjs/common';
 import { Todo } from './todo.entity';
-
-
 import {TodoService} from './todo.service';
 
 
 @Controller()
 export class TodoController {
+
   constructor(private readonly TodoService:TodoService) {}
 
+  
+
+  
   @Get('/heloo')
   getHello(): string {
     return this.TodoService.getHello();
