@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -14,9 +13,13 @@ export class TodoService {
 
 
 
-    getHello(): string {return "heloo" }
+    getHello(): string     {
+        return "heloo"
+    }
 
-    findAll(){ return this.TodoRepository.find();}
+    findAll(){
+         return this.TodoRepository.find();
+        }
 
     create(todo: Todo){this.TodoRepository.save(todo);}
 

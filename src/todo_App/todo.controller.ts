@@ -18,7 +18,7 @@ export class TodoController {
     return this.TodoService.getHello();
   }
 
-  @Get('/data')
+  @Get()
   findAll(){
     return this.TodoService.findAll();
   }

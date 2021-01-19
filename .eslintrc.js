@@ -6,10 +6,17 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   plugins: ['@typescript-eslint/eslint-plugin'],
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended',
+  "extends": [
+    "some-other-config-you-use",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/babel",
+    "prettier/flowtype",
+    "prettier/prettier",
+    "prettier/react",
+    "prettier/standard",
+    "prettier/unicorn",
+    "prettier/vue"
   ],
   root: true,
   env: {
@@ -22,5 +29,17 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    "beforeBlockComment": true,
+    "afterBlockComment": true,
+    "beforeLineComment": true,
+    "afterLineComment": true,
+    "allowBlockStart": true,
+    "allowBlockEnd": true,
+    "allowObjectStart": true,
+    "allowObjectEnd": true,
+    "allowArrayStart": true,
+    "allowArrayEnd": true,
+    "max-len": ["error", {"code": 80, "ignoreUrls": true}]
   },
+  
 };
